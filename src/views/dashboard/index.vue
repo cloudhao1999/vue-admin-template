@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">欢迎来到vue-element-admin后台管理系统</div>
   </div>
 </template>
 
@@ -21,10 +21,14 @@ export default {
 .dashboard {
   &-container {
     margin: 30px;
+    height: 100%;
   }
   &-text {
     font-size: 30px;
     line-height: 46px;
+    text-align: center;
+    padding-top: 25%;
+    color: gray;
   }
 }
 </style>

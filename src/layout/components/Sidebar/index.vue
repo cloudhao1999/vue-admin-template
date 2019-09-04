@@ -1,3 +1,4 @@
+<!--左侧菜单项导航-->
 <template>
   <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo" :collapse="isCollapse" />
@@ -30,6 +31,7 @@ export default {
     ...mapGetters([
       'sidebar'
     ]),
+    // 获取当前的路由列表
     routes() {
       return this.$router.options.routes
     },

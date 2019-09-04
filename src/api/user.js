@@ -1,3 +1,4 @@
+// 获取user信息的api
 import request from '@/utils/request'
 
 export function login(data) {

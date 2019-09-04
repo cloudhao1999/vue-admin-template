@@ -10,7 +10,7 @@ const service = axios.create({
   timeout: 5000 // request timeout
 })
 
-// request interceptor
+// request interceptor 拦截请求，通常用于权限管理
 service.interceptors.request.use(
   config => {
     // do something before request is sent
@@ -19,6 +19,7 @@ service.interceptors.request.use(
       // let each request carry token
       // ['X-Token'] is a custom headers key
       // please modify it according to the actual situation
+      // 判断是否存在token，如果存在的话，则每个http header都加上token
       config.headers['X-Token'] = getToken()
     }
     return config
